@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RainbowLooms</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fefefe;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(to right, #ff0080, #ff8c00);
+      padding: 1rem;
+      text-align: center;
+      color: white;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+    }
+    main {
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    img {
+      width: 200px;
+      margin: 1rem;
+      border-radius: 10px;
+    }
+    footer {
+      background: #eee;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>RainbowLooms</h1>
+    <nav>
+      <a href="#bracelets">Bracelets</a>
+      <a href="#necklaces">Necklaces</a>
+      <a href="#mystery">Mystery Box</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="bracelets">
+      <h2>Bracelets</h2>
+      <img src="red-heart-bracelet.jpeg" alt="Red Heart Bracelet">
+      <img src="blue-bracelet.jpeg" alt="Blue Bracelet">
+    </section>
+
+    <section id="necklaces">
+      <h2>Necklaces</h2>
+      <img src="green-orange-necklace.jpeg" alt="Green and Orange Necklace">
+    </section>
+
+    <section id="mystery">
+      <h2>Mystery Box</h2>
+      <img src="mystery-box.jpg" alt="Mystery Box" onclick="openMysteryBox()">
+      <p>Click the mystery box to reveal a surprise!</p>
+      <p id="mystery-result"></p>
+    </section>
+
+    <footer>
+      <h3>Terms of Service</h3>
+      <p>Please make sure you do <strong>NOT</strong> give necklaces to humans — they are for dogs. We are currently working on an online ordering system. All products are made of rubber bands (loom rubber bands).</p>
+    </footer>
+  </main>
+
+  <script>
+    function openMysteryBox() {
+      const items = [
+        'Red Heart Bracelet',
+        'Blue Bracelet',
+        'Green and Orange Necklace',
+        'Rainbow Bracelet (coming soon!)',
+        'Mystery Keychain!'
+      ];
+      const result = items[Math.floor(Math.random() * items.length)];
+      document.getElementById('mystery-result').textContent = "You got: " + result + "!";
+    }
+  </script>
+</body>
+</html>
