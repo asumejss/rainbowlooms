@@ -1,92 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>RainbowLooms</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #fefefe;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background: linear-gradient(to right, #ff0080, #ff8c00);
-      padding: 1rem;
-      text-align: center;
-      color: white;
-    }
-    nav a {
-      margin: 0 1rem;
-      color: white;
-      text-decoration: none;
-    }
-    main {
-      padding: 2rem;
-    }
-    section {
-      margin-bottom: 3rem;
-    }
-    img {
-      width: 200px;
-      margin: 1rem;
-      border-radius: 10px;
-    }
-    footer {
-      background: #eee;
-      padding: 1rem;
-      text-align: center;
-      font-size: 0.9rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>rainbowlooms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #f9f9f9, #f0f8ff);
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff1493;
+            font-size: 3em;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 250px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        .tos {
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #555;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>RainbowLooms</h1>
-    <nav>
-      <a href="#bracelets">Bracelets</a>
-      <a href="#necklaces">Necklaces</a>
-      <a href="#mystery">Mystery Box</a>
-    </nav>
-  </header>
+    <h1>rainbowlooms</h1>
 
-  <main>
+    <nav>
+        <a href="#bracelets">Bracelets</a>
+        <a href="#necklaces">Necklaces</a>
+        <a href="#mystery">Mystery Box</a>
+    </nav>
+
     <section id="bracelets">
-      <h2>Bracelets</h2>
-      <img src="red-heart-bracelet.jpeg" alt="Red Heart Bracelet">
-      <img src="blue-bracelet.jpeg" alt="Blue Bracelet">
+        <h2>Bracelets</h2>
+        <div class="gallery">
+            <img src="red_heart_bracelet.jpg" alt="Red Heart Bracelet">
+            <img src="blue_bracelet.jpg" alt="Blue Bracelet">
+        </div>
     </section>
 
     <section id="necklaces">
-      <h2>Necklaces</h2>
-      <img src="green-orange-necklace.jpeg" alt="Green and Orange Necklace">
+        <h2>Necklaces</h2>
+        <div class="gallery">
+            <img src="green_orange_necklace.jpg" alt="Green and Orange Necklace">
+        </div>
     </section>
 
     <section id="mystery">
-      <h2>Mystery Box</h2>
-      <img src="mystery-box.jpg" alt="Mystery Box" onclick="openMysteryBox()">
-      <p>Click the mystery box to reveal a surprise!</p>
-      <p id="mystery-result"></p>
+        <h2>Mystery Box</h2>
+        <p>You have a chance to get one of these awesome surprises!</p>
+        <div class="gallery">
+            <img src="red_heart_bracelet.jpg" alt="Mystery Item 1">
+            <img src="blue_bracelet.jpg" alt="Mystery Item 2">
+            <img src="green_orange_necklace.jpg" alt="Mystery Item 3">
+        </div>
     </section>
 
-    <footer>
-      <h3>Terms of Service</h3>
-      <p>Please make sure you do <strong>NOT</strong> give necklaces to humans — they are for dogs. We are currently working on an online ordering system. All products are made of rubber bands (loom rubber bands).</p>
-    </footer>
-  </main>
-
-  <script>
-    function openMysteryBox() {
-      const items = [
-        'Red Heart Bracelet',
-        'Blue Bracelet',
-        'Green and Orange Necklace',
-        'Rainbow Bracelet (coming soon!)',
-        'Mystery Keychain!'
-      ];
-      const result = items[Math.floor(Math.random() * items.length)];
-      document.getElementById('mystery-result').textContent = "You got: " + result + "!";
-    }
-  </script>
+    <div class="tos">
+        <p><strong>Terms of Service:</strong> Please make sure you do <strong>NOT</strong> give necklaces to humans. They are for dogs. We are currently working on an online ordering system. All items are made of rubber bands (loom rubber bands).</p>
+    </div>
 </body>
 </html>
